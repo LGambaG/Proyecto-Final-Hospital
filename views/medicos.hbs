@@ -1,0 +1,40 @@
+<h1>Centro Medico Hospital MetaPower S.L.</h1>
+<h2>LISTADO DE MEDICOS Y ESPECIALIDAD</h2>
+<table>
+    <thead>
+        <tr>
+            <th>Cedula</th>
+            <th>Nombres</th>
+            <th>Apellidos</th>
+            <th>Especialidad</th>
+            <th>Consultorio</th>
+            <th>Correo</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each medicos}}
+        <tr>
+            <form action="/medicos/actualizar/{{cedula}}" method="post">
+                <td><input id="cedula" name="cedula" value="{{cedula}}" disabled></td>
+                <td><input id="nombres" name="nombres" value="{{nombres}}" {{../opcion}}></td>
+                <td><input id="apellidos" name="apellidos" value="{{apellidos}}" {{../opcion}}></td>
+                <td><input id="especialidad" name="especialidad" value="{{especialidad}}" {{../opcion}}></td>
+                <td><input id="consultario" name="consultorio" value="{{consultorio}}" {{../opcion}}></td>
+                <td><input id="correo" name="correo" value="{{correo}}" {{../opcion}}></td>
+                <td>
+                    {{#if ../estado}}
+                    <a class="eliminar" href="/medicos/eliminar/{{cedula}}">Eliminar<img src="/imagenes/eliminar.png"></a>
+                    <a class="editar" href="/medicos/activar">Editar<img src="/imagenes/editar.png"></a>
+                    {{else}}
+                    <input type="submit" value="Enviar">
+                    {{/if}}
+                </td>
+            </form>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
+<div class="opciones-tabla">
+<a class="volver" href="/">Volver</a>
+<a href="/medicos/agregar-medico">Agregar medico</a>
+</div>
