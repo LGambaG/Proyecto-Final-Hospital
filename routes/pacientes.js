@@ -27,7 +27,7 @@ router.post('/agregar', (req, res) => {
   const apellido = req.body.apellido_paciente;
   const edad = req.body.edad;
   const telefono = req.body.telefono;
-  connection.query(`INSERT INTO pacientes (cedula, nombre, apellido, edad, telefono) VALUES (${cedula},'${nombre_paciente}', '${apellido_paciente}', ${edad}, ${telefono})`, (error, result) => {
+  connection.query(`INSERT INTO pacientes (cedula, nombre, apellido, edad, telefono) VALUES (${cedula},'${nombre}', '${apellido}', ${edad}, ${telefono})`, (error, result) => {
     if (error) {
       console.log("Ocurrio un error en la ejecución", error)
       res.status(500).send("Error en la consulta");
@@ -51,12 +51,13 @@ router.get('/activar', function (req, res) {
 });
 
 router.post('/actualizar/:cedula', (req, res) => {
-  const cedula = req.body.cedula;
-  const nombre = req.body.paciente_nombre;
-  const apellido = req.body.paciente_apellido;
+  // console.log(req.params)
+  const cedula = req.params.cedula;
+  const nombre = req.body.nombre_paciente;
+  const apellido = req.body.apellido_paciente;
   const edad = req.body.edad;
   const telefono = req.body.telefono;
-  connection.query(`UPDATE pacientes SET nombre='${nombre_paciente}', apellido='${apellido_paciente}', edad=${edad}, telefono=${telefono} WHERE cedula=${cedula}`, (error, result) => {
+  connection.query(`UPDATE pacientes SET nombre='${nombre}', apellido='${apellido}', edad=${edad}, telefono=${telefono} WHERE cedula=${cedula}`, (error, result) => {
     if (error) {
       console.log("Ocurrio un error en la ejecución", error)
       res.status(500).send("Error en la consulta");
