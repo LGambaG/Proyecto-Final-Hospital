@@ -9,6 +9,7 @@
             <th>Especialidad</th>
             <th>Consultorio</th>
             <th>Correo</th>
+            <th>Opciones</th>
         </tr>
     </thead>
     <tbody>
@@ -23,8 +24,8 @@
                 <td><input id="correo" name="correo" value="{{correo}}" {{../opcion}}></td>
                 <td>
                     {{#if ../estado}}
-                    <a class="eliminar" href="/medicos/eliminar/{{cedula}}">Eliminar<img src="/imagenes/eliminar.png"></a>
-                    <a class="editar" href="/medicos/activar">Editar<img src="/imagenes/editar.png"></a>
+                    <a class="eliminar" href="/medicos/eliminar/{{cedula}}" onclick="return confirm('¿Esta seguro que desea eliminar el registro?')" title="Eliminar registro"><img src="/images/delete.png"></a>
+                    <a class="editar" href="/medicos/activar" title="Editar registro"><img src="/images/edit.png"></a>
                     {{else}}
                     <input type="submit" value="Enviar">
                     {{/if}}

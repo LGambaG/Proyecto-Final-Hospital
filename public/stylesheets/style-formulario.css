@@ -1,63 +1,84 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f2f2f2;
-    margin: 0;
-    padding: 20px;
-  }
-  
-  h1 {
-    color: #333;
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  
-  form {
-    max-width: 400px;
-    margin: 0 auto;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 4px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  }
-  
-  label {
-    display: block;
-    margin-bottom: 8px;
-  }
-  
-  input[type="text"],
-  input[type="number"],
-  input[type="date"],  input[type="tel"], input[type="email"], select{
-    width: 100%;
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    margin-bottom: 12px;
-  }
-  
-  input[type="submit"] {
-    background-color: #4caf50;
-    color: #fff;
-    padding: 10px 16px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  input[type="submit"]:hover {
-    background-color: #45a049;
-  }
-  
-  input:required, select:required {
-    border-color: #ff0000;
-  }
-  
-  input:invalid, select:invalid {
-    border-color: #ff0000;
-  }
-  
-  input:valid, select:valid {
-    border-color: #00ff00;
-  }
-  
+  font-family: Arial, sans-serif;
+  background-color: whitesmoke;
+  background-image: url("/images/fondo-doctores-form.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto;
+  margin: 0;
+  padding: 20px;
+}
+
+h1 {
+  color: #035466;
+  font-family: sans-serif;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.parrafo-form {
+  text-align: center;
+  font-style: oblique;
+  color: #5e5a5a;
+  font-size: 20px;
+  margin-bottom: 40px;
+}
+
+
+form {
+  max-width: 400px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 6px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.6);
+}
+
+
+label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="date"],
+input[type="tel"],
+input[type="email"],
+select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-bottom: 12px;
+}
+
+input[type="submit"] {
+  background-color: #4caf50;
+  color: #fff;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+input:required,
+select:required {
+  border-color: #ff0000;
+}
+
+input:invalid,
+select:invalid {
+  border-color: #ff0000;
+}
+
+input:valid,
+select:valid {
+  border-color: #00ff00;
+  width: 400px;
+}

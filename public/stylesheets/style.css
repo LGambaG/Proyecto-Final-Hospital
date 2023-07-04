@@ -1,19 +1,60 @@
 body {
   font-family: Arial, sans-serif;
-  background-color: #f2f2f2;
-  margin: 0;
-  padding: 20px;
+  /* background-color: #bed4e7; */
+  background-image: url("/images/fondo-doctores.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: auto;
+  padding: 10px;
+
 }
 
+.header {
+  box-shadow: 0px 2px 4px rgba(51, 51, 51, 0.1);
+  background: whitesmoke;
+  padding: 10px;
+  width: 100%;
+  height: auto;
+  position: fixed; 
+  border-radius: 2px;
+  display: flex;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+}
+
+.header-contenido {
+  display: flex;
+  align-items: center;
+}
+
+.logo-cruz {
+  width: 50px; 
+  height: auto;
+  margin-right: 45px;
+}
 h1 {
-  color: #333;
+  color: #035466;
   text-align: center;
 }
 
 h2 {
   text-align: center;
   color: #666;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+.pagina-principal {
+  margin-top: 110px;
+  background-color: #b3e6e9;
+  padding: 50px;
+  border-radius: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  width: auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 table {
@@ -26,16 +67,17 @@ table {
 
 th,
 td {
-  padding: 8px;
+  padding: 13px;
   text-align: left;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid #bed4e7;
+  border-radius: 1px;
 }
 
 th {
-  background-color: #f2f2f2;
+  background-color: #9cc8ca;
 }
 
-tr:nth-child(even) {
+tr {
   background-color: #f9f9f9;
 }
 
@@ -43,25 +85,29 @@ input {
   border: 0;
 }
 
-img{
+img {
   width: 15px;
 }
 
-a, input[type="submit"] {
+a,
+input[type="submit"] {
   color: #fff;
   text-decoration: none;
-  padding: 8px 12px;
+  padding: 10px 14px;
   background-color: #4caf50;
   border: none;
-  font-size: medium;
-  border-radius: 4px;
+  font-size: large;
+  border-radius: 8px;
 }
 
-a:hover, input[type="submit"]:hover {
+a:hover,
+input[type="submit"]:hover {
   background-color: #45a049;
+  width: 150px;
 }
 
-.volver, .editar{
+.volver,
+.editar {
   background-color: #4cacaf;
 }
 
@@ -69,7 +115,8 @@ a:hover, input[type="submit"]:hover {
   background-color: #ff0000;
 }
 
-.volver,.editar:hover {
+.volver,
+.editar:hover {
   background-color: #429396;
 }
 
@@ -81,13 +128,14 @@ button {
   margin-top: 10px;
 }
 
-.opciones-tabla{
+.opciones-tabla {
   display: flex;
   justify-content: center;
 }
 
-.opciones-tabla a{
+.opciones-tabla a {
   width: 150px;
-    text-align: center;
-    margin: 10px;
+  text-align: center;
+  margin: 10px;
 }
+

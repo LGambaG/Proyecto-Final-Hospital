@@ -18,7 +18,7 @@
             <td>{{nombres}}</td>
             <td>{{consultorio}}</td>
             <td>
-                <a class="eliminar" href="/citas/eliminar/{{id}}">Eliminar</a>
+                <a class="eliminar" href="/citas/eliminar/{{id}}" onclick="return confirm('¿Esta seguro que desea eliminar el registro?')" title="Eliminar registro"><img src="/images/delete.png"></a>
             </td>
         </tr>
         {{/each}}
@@ -26,5 +26,5 @@
 </table>
 <div class="opciones-tabla">
     <a class="volver" href="/">Volver</a>
-    <a href="/citas/agregar-cita">Nueva cita</a>
+    <a href="/citas/agregar-cita">Nueva cita</a>    
 </div>

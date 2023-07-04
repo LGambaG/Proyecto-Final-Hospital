@@ -1,5 +1,25 @@
-<h1>Bienvenido a {{title}}</h1>
-<p>Selecciona una opción</p>
-<a href="/pacientes">Listar pacientes</a>
-<a href="/medicos">Listar medicos</a>
-<a href="/citas">Solicitar una cita  medico</a>
+<header class="header">
+    <div class="header-contenido">
+        <img class="logo-cruz" src="/images/cruz-hospital.png" alt="Logo centro médico">
+        <h1>Bienvenido al centro médico {{title}}</h1>
+    </div>
+</header>
+
+<div class="pagina-principal">
+    <p>Apreciado Usuario, </p>
+    <p>En la presente pagina podrán registrarse médicos, pacientes y citas medicas
+        respectivamente en los formularios indicados. Recuerde llenar los datos
+        completos.</p>
+    <p>A continuación selecciona una opción</p>
+    <br />
+    <br />
+    <a href="/pacientes" alt="pacientes">Listar pacientes</a>
+    <a href="/medicos" alt="medicos">Listar medicos</a>
+    <a href="/citas" alt="citas medicas">Solicitar una cita medico</a>
+    <br />
+    <br />
+        <p style="text-align:right;">
+            <b>Nota: </b>
+            En caso de que quiera eliminar una medico o paciente debe asegurarse que
+            no estos no tengan registrados citas medicas.</p>
+</div>

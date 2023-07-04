@@ -22,8 +22,8 @@
                 <td><input id="telefono" name="telefono" value="{{telefono}}" {{../opcion}}></td>
                 <td>
                 {{#if ../estado}}
-                    <a class="eliminar" href="/pacientes/eliminar/{{cedula}}"><img src="/imagenes/eliminar.png"></a>
-                    <a class="editar" href="/pacientes/activar"><img src="/imagenes/editar.png"></a>
+                    <a class="eliminar" href="/pacientes/eliminar/{{cedula}}" onclick="return confirm('¿Esta seguro que desea eliminar el registro?')" title="Eliminar registro" ><img src="/images/delete.png"></a>
+                    <a class="editar" href="/pacientes/activar" title="Editar registro"><img src="/images/edit.png"></a>
                 {{else}}
                     <input type="submit" value="Enviar">
                 {{/if}}
