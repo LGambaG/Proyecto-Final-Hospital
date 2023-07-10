@@ -27,6 +27,8 @@ router.post('/agregar', (req, res) => {
   const apellido = req.body.apellido_paciente;
   const edad = req.body.edad;
   const telefono = req.body.telefono;
+  
+  if (cedula )
   connection.query(`INSERT INTO pacientes (cedula, nombre, apellido, edad, telefono) VALUES (${cedula},'${nombre}', '${apellido}', ${edad}, ${telefono})`, (error, result) => {
     if (error) {
       console.log("Ocurrio un error en la ejecución", error)

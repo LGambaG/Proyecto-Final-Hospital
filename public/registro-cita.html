@@ -18,12 +18,12 @@
         <form action="./agregar" method="post">
             <h2>REGISTRO DE CITAS MEDICAS</h2>
             <label for="cedula">Número de cédula del paciente:<span> *</span></label>
-            <input type="text" id="cedula" name="cedula" required><br>
+            <input type="text" id="cedula" name="cedula" pattern="[0-9]{6,}" title="La cedula debe tener mínimo 6 numeros y el paciente debe estar previamente registrado" required><br>
             <label for="fecha">Fecha:<span> *</span></label>
             <input type="date" id="fecha" name="fecha" required><br>
             <label for="especialidad">Selecione la especialidad requerida:<span> *</span></label>
             <select id="especialidad" name="especialidad" required>
-                <option value="">------------------------  Seleccione especialidad  ---------------------</option>
+                <option value="" title="La especialidad dede de ser de algun médico existente.">------------------------  Seleccione especialidad  ---------------------</option>
                 <option value="Medicina general">Medicina general</option>
                 <option value="Cardiología">Cardiología</option>
                 <option value="Medicina interna">Medicina interna</option>
