@@ -19,7 +19,7 @@
                 <td><input id="apellido_paciente" name="apellido_paciente" value="{{apellido}}" {{../opcion}} pattern="^[a-zA-Z\sñÑ]+$"></td>
                 <td><input id="cedula" name="cedula" value="{{cedula}}" disabled></td>
                 <td><input id="edad" name="edad" value="{{edad}}" {{../opcion}} min="1"></td>
-                <td><input id="telefono" name="telefono" value="{{telefono}}" {{../opcion}} pattern="[0-9]{7,}" title="El telefono debe tener al menos 7 numeros"></td>
+                <td><input id="telefono" name="telefono" value="{{telefono}}" {{../opcion}} pattern="[0-9]{6,12}" title="El telefono debe tener al menos 6 numeros"></td>
                 <td>
                 {{#if ../estado}}
                     <a class="eliminar" href="/pacientes/eliminar/{{cedula}}" onclick="return confirm('¿Esta seguro que desea eliminar el registro?')" title="Eliminar registro" ><img src="/images/delete.png"></a>
