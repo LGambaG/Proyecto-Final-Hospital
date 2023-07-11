@@ -17,11 +17,11 @@
         <tr>
             <form action="/medicos/actualizar/{{cedula}}" method="post">
                 <td><input id="cedula" name="cedula" value="{{cedula}}" disabled></td>
-                <td><input id="nombres" name="nombres" value="{{nombres}}" {{../opcion}}></td>
-                <td><input id="apellidos" name="apellidos" value="{{apellidos}}" {{../opcion}}></td>
-                <td><input id="especialidad" name="especialidad" value="{{especialidad}}" {{../opcion}}></td>
-                <td><input id="consultario" name="consultorio" value="{{consultorio}}" {{../opcion}}></td>
-                <td><input id="correo" name="correo" value="{{correo}}" {{../opcion}}></td>
+                <td><input id="nombres" name="nombres" value="{{nombres}}" {{../opcion}} pattern="^[a-zA-Z\sñÑ]+$"></td>
+                <td><input id="apellidos" name="apellidos" value="{{apellidos}}" {{../opcion}} pattern="^[a-zA-Z\sñÑ]+$"></td>
+                <td><input id="especialidad" name="especialidad" value="{{especialidad}}" {{../opcion}} title="Escriba una especialidad válida"></td>
+                <td><input id="consultorio" name="consultorio" value="{{consultorio}}" {{../opcion}} pattern="[0-9]{1,3}" title="El consultorio debe tener mínimo un caracter numerico y máximo tres"></td>
+                <td><input id="correo" name="correo" value="{{correo}}" {{../opcion}} type="email"></td>
                 <td>
                     {{#if ../estado}}
                     <a class="eliminar" href="/medicos/eliminar/{{cedula}}" onclick="return confirm('¿Esta seguro que desea eliminar el registro?')" title="Eliminar registro"><img src="/images/delete.png"></a>
